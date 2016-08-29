@@ -1,0 +1,36 @@
+NAME
+        SudokuSolver
+
+SYNOPSIS
+        sudokusolver [FLAGS] [FILE]
+        
+DESCRIPTION
+        SudokuSolver is built to solve Sudoku games choosing among a set of different algorithms.
+        
+        Target file must be an ASCII text file that represents the Sudoku table that has to be
+        solved and it must follow this syntax:
+        
+        xxxxxxxxx
+        xxxxxxxxx
+        xxxxxxxxx
+        xxxxxxxxx
+        xxxxxxxxx
+        xxxxxxxxx
+        xxxxxxxxx
+        xxxxxxxxx
+        xxxxxxxxx
+        
+        where if x is a digit from 1 to 9 it represents a fixed cell (containing that digit), if x
+        is any other ASCII character (except for special ones) it represents an empty cell.
+        
+FLAGS
+        General
+            -v
+                Run SudokuSolver in verbose mode, displaying solving attempts.
+        
+        Algorithm selection (mutually exclusive flags)
+            -b
+                Use backtracking algorithm. This is the default algorithm.
+            
+            -bf
+                Use brute force algorithm.
