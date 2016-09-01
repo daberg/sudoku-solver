@@ -29,8 +29,11 @@ FLAGS
                 Run SudokuSolver in verbose mode, displaying solving attempts.
         
         Algorithm selection (mutually exclusive flags)
+            -br
+                Use backtracking recursive algorithm. This is the default algorithm.
+        
             -b
-                Use backtracking algorithm. This is the default algorithm.
+                Use backtracking iterative algorithm.
             
             -bf
                 Use brute force algorithm.
