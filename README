@@ -1,4 +1,4 @@
-SudokuSolver is a plain C platform independent program made to test different Sudoku games solving
+SudokuSolver is a plain C platform independent program made to test different Sudoku solving
 algorithms.
 
 It is built upon standard C libraries, so it does not have any special dependency.
