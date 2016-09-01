@@ -53,6 +53,14 @@ int parseConfFromArgs (int argc, char** argv) {
             }
         }
         
+        else if (strcmp(argv[i], "-br") == 0) {
+            if (algChosen) return -1;
+            else {
+                config.algorithm = BACKTRACKREC;
+                algChosen = TRUE;
+            }
+        }
+        
         else if (strcmp(argv[i], "-v") == 0) {
             config.verbose = TRUE;
         }

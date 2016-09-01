@@ -41,8 +41,9 @@ int main (int argc, char** argv) {
         return -1;
     }
     
-    int (*solveAlgs[2]) (TABLE* p_startTable, TABLE* p_destTable);
-    solveAlgs[BACKTRACKING] = backTrackingTableSolution;
+    int (*solveAlgs[3]) (TABLE* p_startTable, TABLE* p_destTable);
+    solveAlgs[BACKTRACKREC] = backTrackTableSolutionRecursive;
+    solveAlgs[BACKTRACKING] = backTrackTableSolution;
     solveAlgs[BRUTEFORCE] = bruteForceTableSolution;
     
     TABLE destTable;

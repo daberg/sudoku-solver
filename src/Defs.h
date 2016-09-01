@@ -21,8 +21,9 @@
 #define TABLE_WIDTH 9
 #define TABLE_HEIGHT TABLE_WIDTH
 
-#define BACKTRACKING 0
-#define BRUTEFORCE 1
+#define BACKTRACKREC 0
+#define BACKTRACKING 1
+#define BRUTEFORCE 2
 
 typedef enum { FALSE, TRUE } boolean;
 
@@ -41,6 +42,11 @@ extern CONF config;
 extern char* targetFilename;
 
 
+// Algos.c
+int bruteForceTableSolution (TABLE* p_startTable, TABLE* p_destTable);
+int backTrackTableSolution (TABLE* p_startTable, TABLE* p_destTable);
+int backTrackTableSolutionRecursive (TABLE* p_startTable, TABLE* p_destTable);
+
 // Args.c
 int parseConfFromArgs (int argc, char** argv);
 void printUsage (FILE* stream);
@@ -49,8 +55,14 @@ void printUsage (FILE* stream);
 int fetchTableFromFile (const char* fileName, TABLE* p_table);
 
 // Solve.c
-int bruteForceTableSolution (TABLE* p_startTable, TABLE* p_destTable);
-int backTrackingTableSolution (TABLE* p_startTable, TABLE* p_destTable);
+boolean isTableComplete (TABLE table);
+boolean isTableValid (TABLE table);
+boolean checkRow (TABLE table, int row);
+boolean checkCol (TABLE table, int col);
+boolean checkBox (TABLE table, int boxStartRow, int boxStartCol);
+boolean checkCell (TABLE table, int cellNum);
+boolean checkTable (TABLE table);
+
 
 // Table.c
 void initTable (TABLE* p_table);
