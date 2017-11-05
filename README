@@ -3,6 +3,6 @@ algorithms.
 
 It is built upon standard C libraries, so it does not have any special dependency.
 
-Code has been tested on Linux-based sysyems and a simple Linux makefile has been included too.
+Code has been tested on a Linux-based system and a simple Linux makefile has been included too.
 
 SudokuSolver is licensed under GPLv3.
